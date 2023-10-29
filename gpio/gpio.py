@@ -83,5 +83,3 @@ def switch_state(pin_nr):
         print('switching pin nr {}'.format(pin_nr))
         set_state(pin_nr, not bool(get_state(pin_nr)))
         print('pin nr {} state is {}'.format(pin_nr, get_state(pin_nr)))
-
-
