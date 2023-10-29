@@ -1,0 +1,1 @@
+flask --app rest_controller run
