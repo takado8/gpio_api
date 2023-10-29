@@ -18,7 +18,7 @@ def switch(device_name):
 def set_state(device_name, state):
     device = DeviceService.get_device(device_name)
     if device:
-        device.set_state(state)
+        device.set_state(float(state))
         return f'Setting {device} to {state}'
     else:
         return f'Unknown device: {device_name}.'
