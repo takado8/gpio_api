@@ -4,7 +4,7 @@ from rest_controller import app
 root = '/relay/'
 
 
-@app.post(root + '<device>')
+@app.post(root + '<device_name>')
 def switch(device_name):
     device = DeviceService.get_device(device_name)
     if device:
@@ -14,7 +14,7 @@ def switch(device_name):
         return f'Unknown device: {device_name}.'
 
 
-@app.post(root + '<device>/<state>')
+@app.post(root + '<device_name>/<state>')
 def set_state(device_name, state):
     device = DeviceService.get_device(device_name)
     if device:
