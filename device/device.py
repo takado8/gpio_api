@@ -19,7 +19,7 @@ class Device:
         self.gpio_service.switch_state(self.pin_nr)
 
     def set_state(self, state):
-        self.gpio_service.set_state(self.pin_nr, state)
+        self.gpio_service.set_state(self.pin_nr, self.on_state if state else self.off_state)
 
     def __str__(self):
         return 'Device(name={}, pin_nr={})'.format(self.name, self.pin_nr)
